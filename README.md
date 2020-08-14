@@ -1,24 +1,56 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## user
 
-Things you may want to cover:
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|password_confirmation|string|null: false|
 
-* Ruby version
+## group
 
-* System dependencies
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|member_name|string|null: false|
 
-* Configuration
+## message
 
-* Database creation
+|Column|TYpe|Option|
+|------|----|------|
+|content|string|null: false|
+|image|string|
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- has_many :messages
 
-* Deployment instructions
 
-* ...
+
+
+
+データベース設計
+
+アプリを触って情報の保存が行われている場面を全て洗い出す
+=>必要なテーブルの数を考える
+新しく送るデータについてはテーブルを用意する。
+①ユーザー新規登録 usersテーブル
+②グループ作成    groupsテーブル
+③メッセージ送信  messagesテーブル
+
+※chat-space,slackのデータベース設計
+
+
+カラム名を考える
+
+userの何を保存するのか？？
+name, email, password, password_confirmation
+
+groupの何を保存するのか？？
+name, (member_name)
+
+messageの何を保存するのか？？
+content, image

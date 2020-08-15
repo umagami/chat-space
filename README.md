@@ -1,6 +1,6 @@
 # README
 
-## user
+## users
 
 |Column|Type|Options|
 |------|----|-------|
@@ -14,24 +14,24 @@
 - has_many :groups, through: :groups_users
 - has_many :groups_users
 
-## group
+## groups
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|member_name|string|null: false|
+||string|null: false|
 
-### Association
+### Associations
 - has_many :users
 - has_many :users, through: :groups_users
 
 
-## message
+## messages
 
 |Column|TYpe|Option|
 |------|----|------|
 |content|string|null: false|
-|image|string|
+|image|string|null: false|
 
 
 ### Association

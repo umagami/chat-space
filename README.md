@@ -30,7 +30,9 @@
 
 |Column|TYpe|Option|
 |------|----|------|
-|content|string|null: false|
+|user_id|integer|null: false, foreign key: true|
+|group_id|integer|null: false, foreign key: true|
+|content|string||
 |image|string||
 
 

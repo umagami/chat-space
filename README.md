@@ -19,23 +19,24 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-||string|null: false|
+
 
 ### Associations
 - has_many :users
 - has_many :users, through: :groups_users
-
+- has_many :groups_users
 
 ## messages
 
 |Column|TYpe|Option|
 |------|----|------|
 |content|string|null: false|
-|image|string|null: false|
+|image|string||
 
 
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 
 ## groups_usersテーブル

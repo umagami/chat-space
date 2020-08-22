@@ -1,0 +1,36 @@
+.Chat-main
+  .Chat-main__group-info
+    .Chat__box-ri
+      .Chat__box-ri__name
+        test
+      .Chat__box-ri__messages
+        Member:masa
+    = link_to "#" do
+      .Chat__box-ri__con
+        Edit
+  .Chat-main__message-list
+    .Chat__box-ru
+      .Chat__box-ru__flex
+        .Chat__box-ru__messages
+          masa
+        .Chat__box-ru__days
+          2019/11/20(Wed) 17:43:01
+      .Chat__box-ru__messa
+        おはよう！
+    .Chat__box-ru
+      .Chat__box-ru__flex
+        .Chat__box-ru__messages
+          masa
+        .Chat__box-ru__days
+          2019/11/20(Web)17:43:34
+      .Chat__box-ru__messa
+        今日は夜から雨
+
+  .Chat-main__message-form
+    .Chat__box-bun__message
+      %input{type: "text", placeholder: "type a message", class: "Chat__box-bun__message__text"}
+      %label{class: "input-box__image"}
+        = icon('fas', 'image')
+        %input{type: "file",class:"Hidden"}
+    %input.Chat__box-bun__send{type: "submit", value: "Send"}
+

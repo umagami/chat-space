@@ -2,77 +2,74 @@
   height: 100vh;
   width: calc(100vw - 300px);
   background-color: white;
-}
-
-.Chat-main__group-info{
-  height: 100px;
-  width: calc(100vw - 300px);
-  color: black;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  a {
-    text-decoration: none;
-  }
-  .Chat__box-ri__name{
-    font-size: 15px;
-    padding: 46px 0 25px 40px;
-    color: #333333;
-  }
-  .Chat__box-ri__messages{
-    font-size: 12px;
-    padding: 0 0 6px 40px;
-    color: #999999;
-  }
-  .Chat__box-ri__con{
-    padding: 0 20px 0 20px;
-    margin: 0 40px 0 0;
-    color: #38aef0;
-    font-size: 16px;
-    border: 1px solid #38aef0;
-    height: 40px;
-    width: 72px;
-    line-height:40px;
-  }
-}
-
-.Chat-main__message-list{
-  height: calc(100vh - 100px - 90px);
-  width: calc(100vw - 300px);
-  color: black;
-  background-color: #fafafa;
-  .Chat__box-ru__flex{
+  &__group-info{
+    height: 100px;
+    width: calc(100vw - 300px);
+    color: black;
+    background-color: #ffffff;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+    &__box-ri__name{
+      font-size: 15px;
+      padding: 46px 0 25px 40px;
+      color: #333333;
+    }
+    &__box-ri__messages{
+      font-size: 12px;
+      padding: 0 0 6px 40px;
+      color: #999999;
+    }
+    &__box-ri__con{
+      padding: 0 20px 0 20px;
+      margin: 0 40px 0 0;
+      color: #38aef0;
+      font-size: 16px;
+      border: 1px solid #38aef0;
+      height: 40px;
+      width: 72px;
+      line-height:40px;
+    }
   }
-  .Chat__box-ru__messages{
-    font-size: 16px;
-    color: #333333;
-    padding: 35px 0 12px 40px;
-  }
-  .Chat__box-ru__days{
-    font-size: 12px;
-    color: #999999;
-    padding: 38px 0 12px 5px;
-  }
-  .Chat__box-ru__messa{
-    font-size: 14px;
-    color: #434A54;
-    padding: 0 0 0 40px;
-  }
-  .Chat__box-ra__messages{
-    font-size: 16px;
-    color: #333333;
-  }
-  .Chat__box-ra__days{
-    font-size: 12px;
-    color: #999999;
-  }
-  .Chat__box-ra__messa{
-    font-size: 14px;
-    color: #434A54;
+  &__message-list{
+    height: calc(100vh - 100px - 90px);
+    width: calc(100vw - 300px);
+    color: black;
+    background-color: #fafafa;
+    padding-left:40px;
+    padding-top:35px;
+
+    &__box-ru{
+      margin-bottom:46px;
+
+      &__flex{
+        display: flex;
+        margin-bottom:12px;
+      }
+
+      &__messages{
+        font-size: 16px;
+        color: #333333;
+      }
+
+      &__messages__days{
+        font-size: 14px;
+        color: #434A54;
+        padding-left:5px;
+
+        &__content{
+          font-size: 14px;
+          color: #434A54;
+        }
+      }
+    }
   }
 }
+
+
 
 .Chat-main__message-form{
   height: 90px;
@@ -82,93 +79,48 @@
   padding: 0 40px;
   display:flex;
   align-items: center;
-}
-.Chat__box-bun__message{
-  display:flex;
-  background-color:white;
-  width:100%;
-  position: relative;
 
-  .Chat__box-bun__message__text{
-    border-style:none;
-    height:50px;
+  &__box-bun__message{
+    display:flex;
+    background-color:white;
     width:100%;
-    padding: 10px;
-}
+    position: relative;
+  
+    &__text{
+      border-style:none;
+      height:50px;
+      width:100%;
+      padding: 10px;
+    }
+  
+    .input-box__image{
+      position: absolute;
+      right:10px;
+      top:10px;
+      .fas {
+        font-size: 25px;
+      }
+    }
+  
+    .Hidden{
+      display:none;
+    }
 
-.input-box__image{
-  position: absolute;
-  right:10px;
-  top:10px;
-  .fas {
-    font-size: 25px;
+    &__send{
+      height: 50px;
+      width: 80px;
+      background-color: #38aef0;
+      color: #fff;
+      font-size: 16px;
+      padding: 13px 15px 20px;
+      margin-left:10px;
+    }
   }
 }
 
-.Hidden{
-  display:none;
-}
-}
-.Chat__box-bun__send{
-  height: 50px;
-  width: 80px;
-  background-color: #38aef0;
-  color: #fff;
-  font-size: 16px;
-  padding: 13px 15px 20px;
-  margin-left:10px;
-}
 
 
 
-
-
-
-// .top-boxes {
-//   display: flex;
-//   justify-content: space-between;
-//   &__left {
-//     height: 100px;
-//     width: 100px;
-//     background-color: #ee82ee;
-//   }
-//   &__center {
-//     height: 100px;
-//     width: 100px;
-//     background-color: #c71585;
-//   }
-//   &__right {
-//     height: 100px;
-//     width: 100px;
-//     background-color: #9400d3;
-//   }
-// }
-
-
-// .bottom-boxes {
-//   display: flex;
-//   justify-content: space-between;
-//   &__left {
-//     height: 200px;
-//     width: 200px;
-//     background-color: #ee82ee;
-//   }
-//   &__center {
-//     height: 200px;
-//     width: 200px;
-//     background-color: #c71585;
-//   }
-//   &__right {
-//     height: 200px;
-//     width: 200px;
-//     background-color: #9400d3;
-//     &--blue {
-//       height: 50px;
-//       width: 50px;
-//       background-color: blue;
-//     }
-//   }
-// }
 
 
 

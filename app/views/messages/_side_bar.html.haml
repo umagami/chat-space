@@ -1,0 +1,20 @@
+.Side-bar
+  .Side-bar__user-name
+    %ul.Side-bar__user-name__Top-items
+      %li.Side-bar__user-name__Top-items__name
+        masa
+    = link_to "#" do
+      = icon('fas', 'edit', class: 'Side-bar__user-name__Top-items__pen')
+    = link_to "#" do
+      = icon('fas', 'cog', class: 'Side-bar__user-name__Top-items__kikai')
+  .Side-bar__group-list
+    .Side-bar__group-list__box
+      %ul.Side-bar__group-list__box__group__name
+        techcamp
+      %ul.Side-bar__group-list__box__group__name__group__messages
+        まだメッセージがありません
+    .Side-bar__group-list__box
+      %ul.Side-bar__group-list__box__group__name
+        techcamp
+      %ul.Side-bar__group-list__box__group__name__group__messages
+        まだメッセージがありません

@@ -1,0 +1,36 @@
+.Chat-main
+  .Chat-main__group-info
+    .Chat-main__group-info__box-ri
+      .Chat-main__group-info__box-ri__name
+        test
+      .Chat-main__group-info__box-ri__messages
+        Member:masa
+    = link_to "#" do
+      .Chat-main__group-info__box-ri__con
+        Edit
+  .Chat-main__message-list
+    .Chat-main__message-list__box-ru
+      .Chat-main__message-list__box-ru__flex
+        .Chat-main__message-list__box-ru__messages
+          masa
+        .Chat-main__message-list__box-ru__messages__days
+          2019/11/20(Wed) 17:43:01
+      .Chat-main__message-list__box-ru__messages__days__content
+        おはよう！
+    .Chat-main__message-list__box-ru
+      .Chat-main__message-list__box-ru__flex
+        .Chat-main__message-list__box-ru__messages
+          masa
+        .Chat-main__message-list__box-ru__messages__days
+          2019/11/20(Wed) 17:43:01
+      .Chat-main__message-list__box-ru__messages__days__content
+        おはよう！
+
+  .Chat-main__message-form
+    .Chat-main__message-form__box-bun__message
+      %input{type: "text", placeholder: "type a message", class: "Chat-main__message-form__box-bun__message__text"}
+      %label{class: "input-box__image"}
+        = icon('fas', 'image')
+        %input{type: "file",class:"Hidden"}
+    %input.Chat-main__message-form__box-bun__message__send{type: "submit", value: "Send"}
+

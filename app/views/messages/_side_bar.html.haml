@@ -1,20 +1,19 @@
 .Side-bar
-  .Side-bar__user-name
-    %ul.Side-bar__user-name__Top-items
-      %li.Side-bar__user-name__Top-items__name
-        masa
+  .LeftHeader
+    .LeftHeader__list
+      %h3.LeftHeader__userName
+        = current_user.name
+    %ul.LeftHeader__iconList
+      %li.LeftHeader__Icon
     = link_to "#" do
-      = icon('fas', 'edit', class: 'Side-bar__user-name__Top-items__pen')
-    = link_to "#" do
-      = icon('fas', 'cog', class: 'Side-bar__user-name__Top-items__kikai')
-  .Side-bar__group-list
-    .Side-bar__group-list__box
-      %ul.Side-bar__group-list__box__group__name
-        techcamp
-      %ul.Side-bar__group-list__box__group__name__group__messages
-        まだメッセージがありません
-    .Side-bar__group-list__box
-      %ul.Side-bar__group-list__box__group__name
-        techcamp
-      %ul.Side-bar__group-list__box__group__name__group__messages
-        まだメッセージがありません
+      = icon('fas', 'edit',)
+  %li.LeftHeader__Icon
+    = link_to edit_user_path(current_user) do
+      = icon('fas', 'cog')
+  .GroupList
+    .Group
+      = link_to '#' do
+        .Group__name
+          グループ名
+        .Group__message
+          最新のメッセージ

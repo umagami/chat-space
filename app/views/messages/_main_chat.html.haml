@@ -10,28 +10,9 @@
     = link_to edit_group_path(@group) do
       .Chat-main__group-info__box-ri__con
         Edit
+
   .Chat-main__message-list
-    .Chat-main__message-list__box-ru
-      .Chat-main__message-list__box-ru__flex
-        .Chat-main__message-list__box-ru__messages
-          masa
-        .Chat-main__message-list__box-ru__messages__days
-          2019/11/20(Wed) 17:43:01
-      .Chat-main__message-list__box-ru__messages__days__content
-        おはよう！
-    .Chat-main__message-list__box-ru
-      .Chat-main__message-list__box-ru__flex
-        .Chat-main__message-list__box-ru__messages
-          masa
-        .Chat-main__message-list__box-ru__messages__days
-          2019/11/20(Wed) 17:43:01
-      .Chat-main__message-list__box-ru__messages__days__content
-        おはよう！
-
-
-.MessageField
-  = render @messages
-
+    = render @messages
 
   = form_with model: [@group, @message], html: {class: "Chat-main__message-form"}, local: true do |f|
     .Chat-main__message-form__box-bun__message

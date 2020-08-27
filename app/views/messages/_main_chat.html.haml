@@ -2,10 +2,12 @@
   .Chat-main__group-info
     .Chat-main__group-info__box-ri
       .Chat-main__group-info__box-ri__name
-        test
+        = @group.name
       .Chat-main__group-info__box-ri__messages
-        Member:masa
-    = link_to "#" do
+        Member :
+        - @group.users.each do |user|
+          = user.name
+    = link_to edit_group_path(@group) do
       .Chat-main__group-info__box-ri__con
         Edit
   .Chat-main__message-list
@@ -26,11 +28,15 @@
       .Chat-main__message-list__box-ru__messages__days__content
         おはよう！
 
-  .Chat-main__message-form
-    .Chat-main__message-form__box-bun__message
-      %input{type: "text", placeholder: "type a message", class: "Chat-main__message-form__box-bun__message__text"}
-      %label{class: "input-box__image"}
-        = icon('fas', 'image')
-        %input{type: "file",class:"Hidden"}
-    %input.Chat-main__message-form__box-bun__message__send{type: "submit", value: "Send"}
 
+.MessageField
+  = render @messages
+
+
+  = form_with model: [@group, @message], html: {class: "Chat-main__message-form"}, local: true do |f|
+    .Chat-main__message-form__box-bun__message
+      = f.text_field :content,class:"Chat-main__message-form__box-bun__message__text"
+      = f.label :image, class: 'input-box__image' do
+        = icon('fas', 'image')
+        = f.file_field :image, class: 'Hidden'
+    = f.submit 'Send', class: 'Chat-main__message-form__box-bun__message__send'
